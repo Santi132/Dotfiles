@@ -1,0 +1,72 @@
+urxvt.font:                xft:SourceCodePro:size=11
+urxvt.boldFont:            xft:SourceCodePro:size=11:bold
+urxvt.italicFont:          xft:SourceCodePro:size=11:italic
+urxvt.boldItalicFont:      xft:SourceCodePro:size=11:bold:italic
+!urxvt.letterSpace:         0
+
+!#define base00 #030213 
+!#define base01 #2E3D45 
+!#define base02 #455B66
+!#define base03 #567280
+!#define base04 #799FB3
+!#define base05 #93C2D9
+!#define base06 #ADE4FF 
+!#define base07 #FFFFFF 
+!#define base08 #FF4081 // red
+!#define base09 #FF7043 // orange
+!#define base0A #FFA21A // yellow
+!#define base0B #8BC34A // green
+!#define base0C #00BCD4 // cyan
+!#define base0D #2979FF // blue
+!#define base0E #9C27B0 // purple
+!#define base0F #7986CB // indigo
+
+!*foreground:   base05
+!*background:   [90]base00
+!*cursorColor:  #FFCC00
+
+!*.color0:       base00
+!*.color1:       base08
+!*.color2:       base0B
+!*.color3:       base0A
+!*.color4:       base0D
+!*.color5:       base0E
+!*.color6:       base0C
+!*.color7:       base05
+!*.color8:       base03
+!*.color9:       base08
+!*.color10:      base0B
+!*.color11:      base0A
+!*.color12:      base0D
+!*.color13:      base0E
+!*.color14:      base0C
+!*.color15:      base07
+
+
+urxvt.depth: 32
+urxvt.scrollBar: false
+urxvt.perl-ext-common: default,matcher,resize-font,keyboard-select,clipboard
+urxvt.url-launcher: /usr/bin/xdg-open
+urxvt.matcher.button: 1
+urxvt.matcher.rend.0: Uline
+
+urxvt.resize-font.smaller: C-minus
+urxvt.resize-font.bigger: C-plus
+urxvt.resize-font.reset: C-equal
+urxvt.resize-font.show: C-question
+
+!urxvt.iso14755: false
+!urxvt.iso14755_52: false
+
+!urxvt.keysym.M-Escape: perl:keyboard-select:activate
+!urxvt.keysym.C-Escape: command: \033[6 q
+
+!-------------------------------------------------------
+! ROFI Color Theme
+!-------------------------------------------------------
+rofi.opacity: 80
+rofi.color-enabled: true
+rofi.color-window: #393939, #393939, #268bd2
+rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
