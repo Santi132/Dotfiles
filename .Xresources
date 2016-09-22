@@ -34,7 +34,8 @@ urxvt.letterSpace:         0
 !*color7:  #a89984
 !*color15: #ebdbb2
 
-*background: #1c1b1a
+!*background: #1c1b1a
+*background: #121212
 *foreground: #f8f6f2
 *cursorColor: #aeee00
 *scrollColor: #45413b
