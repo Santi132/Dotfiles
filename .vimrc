@@ -24,6 +24,18 @@ Plugin 'morhetz/gruvbox'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'nanotech/jellybeans.vim'
+
+Plugin 'ryanoasis/vim-devicons'
+
+Plugin 'edkolev/promptline.vim'
+
+Plugin 'sjl/badwolf'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,14 +54,18 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='jellybeans'
+let g:airline_theme='badwolf'
 
 " Set numbered lines
 set number
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=7 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Set the colorscheme
-set background=dark
-colorscheme hybrid
+"set background=dark
+let g:gruvbox_italic=1
+colorscheme badwolf
 
 syntax enable
+ 
+" toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>

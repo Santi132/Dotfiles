@@ -2,46 +2,69 @@ urxvt.font:                xft:SourceCodePro:size=11
 urxvt.boldFont:            xft:SourceCodePro:size=11:bold
 urxvt.italicFont:          xft:SourceCodePro:size=11:italic
 urxvt.boldItalicFont:      xft:SourceCodePro:size=11:bold:italic
-!urxvt.letterSpace:         0
+urxvt.letterSpace:         0
 
-!#define base00 #030213 
-!#define base01 #2E3D45 
-!#define base02 #455B66
-!#define base03 #567280
-!#define base04 #799FB3
-!#define base05 #93C2D9
-!#define base06 #ADE4FF 
-!#define base07 #FFFFFF 
-!#define base08 #FF4081 // red
-!#define base09 #FF7043 // orange
-!#define base0A #FFA21A // yellow
-!#define base0B #8BC34A // green
-!#define base0C #00BCD4 // cyan
-!#define base0D #2979FF // blue
-!#define base0E #9C27B0 // purple
-!#define base0F #7986CB // indigo
+!! hard contrast:
+!*background: #1d2021
+!!*background: #282828
+!! soft contrast: *background: #32302f
+!*foreground: #ebdbb2
+!! Black + DarkGrey
+!*color0:  #282828
+!*color8:  #928374
+!! DarkRed + Red
+!*color1:  #cc241d
+!*color9:  #fb4934
+!! DarkGreen + Green
+!*color2:  #98971a
+!*color10: #b8bb26
+!! DarkYellow + Yellow
+!*color3:  #d79921
+!*color11: #fabd2f
+!! DarkBlue + Blue
+!*color4:  #458588
+!*color12: #83a598
+!! DarkMagenta + Magenta
+!*color5:  #b16286
+!*color13: #d3869b
+!! DarkCyan + Cyan
+!*color6:  #689d6a
+!*color14: #8ec07c
+!! LightGrey + White
+!*color7:  #a89984
+!*color15: #ebdbb2
 
-!*foreground:   base05
-!*background:   [90]base00
-!*cursorColor:  #FFCC00
+*background: #1c1b1a
+*foreground: #f8f6f2
+*cursorColor: #aeee00
+*scrollColor: #45413b
+*fadeColor: #ffffff
+!*fading: 20
 
-!*.color0:       base00
-!*.color1:       base08
-!*.color2:       base0B
-!*.color3:       base0A
-!*.color4:       base0D
-!*.color5:       base0E
-!*.color6:       base0C
-!*.color7:       base05
-!*.color8:       base03
-!*.color9:       base08
-!*.color10:      base0B
-!*.color11:      base0A
-!*.color12:      base0D
-!*.color13:      base0E
-!*.color14:      base0C
-!*.color15:      base07
-
+!black
+*color0: #141413
+*color8: #000000
+! red
+*color1: #ff2c4b
+*color9: #ff2c4b
+! green
+*color2: #aeee00
+*color10: #aeee00
+! yellow
+*color3: #fade3e
+*color11: #ffa724
+! blue
+*color4: #0a9dff
+*color12: #0a9dff
+! magenta
+*color5: #ff9eb8
+*color13: #ff9eb8
+! cyan
+*color6: #8cffba
+*color14: #8cffba
+! white
+*color7: #d9cec3
+*color15: #ffffff
 
 urxvt.depth: 32
 urxvt.scrollBar: false
