@@ -183,5 +183,13 @@ function wttr {
         curl wttr.in/$1
     fi
 }
+
+#Use vim for nvim
+function vim {
+    nvim "$@"
+}
+
 #for promptline
 source ~/.promptline
+
+alias tmux="TERM=screen-256color-bce tmux"
