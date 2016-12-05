@@ -16,8 +16,6 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-fugitive'
 
-Plugin 'scrooloose/syntastic'
-
 Plugin 'w0ng/vim-hybrid'
 
 Plugin 'morhetz/gruvbox'
@@ -39,6 +37,12 @@ Plugin 'sjl/badwolf'
 Plugin 'dracula/vim'
 
 Plugin 'chriskempson/vim-tomorrow-theme'
+
+Plugin 'scrooloose/syntastic'
+
+Plugin 'hdima/python-syntax'
+
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,14 +68,29 @@ let g:airline#extensions#tabline#enabled = 1
 " Set numbered lines
 set number
 set tabstop=7 softtabstop=0 expandtab shiftwidth=4 smarttab
+let python_highlight_all=1
 
 " Set the colorscheme
 set background=dark
 "set termguicolors
 let g:gruvbox_italic=1
-colorscheme default
+colorscheme gruvbox
 
-syntax enable
+syntax on
  
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" remap the escap in terminal 
+tnoremap <Esc> <C-\><C-n>
+
+" remapping the leader key to comma
+let mapleader = ","
+
+"remapping CtrlP my usage
+nnoremap <space>ff :CtrlP<CR>
+
+"remmapping CtrlPBuffer cuz yeah
+nnoremap <space>bb :CtrlPBuffer<CR>
+
+autocmd TermOpen * set bufhidden=hide
