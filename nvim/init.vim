@@ -40,9 +40,9 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 
 Plugin 'scrooloose/syntastic'
 
-Plugin 'hdima/python-syntax'
-
 Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'KeitaNakamura/highlighter.nvim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,21 +62,24 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='dracula'
+let g:airline_theme='jellybeans'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Set numbered lines
-set number
+set nu
+
 set tabstop=7 softtabstop=0 expandtab shiftwidth=4 smarttab
 let python_highlight_all=1
 
 " Set the colorscheme
-set background=dark
+"set background=dark
 "set termguicolors
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme default
 
-syntax on
+syntax enable
  
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -94,3 +97,10 @@ nnoremap <space>ff :CtrlP<CR>
 nnoremap <space>bb :CtrlPBuffer<CR>
 
 autocmd TermOpen * set bufhidden=hide
+
+" setting highlighter
+let g:highlighter#auto_update = 2
+let g:highlighter#project_root_signs = ['.git']
+
+" Dont like pressing enter
+let g:netrw_silent = 1
