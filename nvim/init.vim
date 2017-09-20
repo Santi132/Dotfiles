@@ -42,7 +42,9 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
-Plugin 'KeitaNakamura/highlighter.nvim'
+Plugin 'tmhedberg/SimpylFold'
+
+Plugin 'hdima/python-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,7 +64,7 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='jellybeans'
+let g:airline_theme='base16_google'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -70,17 +72,17 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " Set numbered lines
 set nu
 
-set tabstop=7 softtabstop=0 expandtab shiftwidth=4 smarttab
-let python_highlight_all=1
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent
 
 " Set the colorscheme
-"set background=dark
-"set termguicolors
+set background=dark
+set termguicolors
 let g:gruvbox_italic=1
 colorscheme default
 
-syntax enable
- 
+let python_highlight_all=1
+syntax on
+
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -98,9 +100,17 @@ nnoremap <space>bb :CtrlPBuffer<CR>
 
 autocmd TermOpen * set bufhidden=hide
 
-" setting highlighter
-let g:highlighter#auto_update = 2
-let g:highlighter#project_root_signs = ['.git']
-
 " Dont like pressing enter
 let g:netrw_silent = 1
+
+nnoremap <space>j <c-w>j
+nnoremap <space>h <c-w>h
+nnoremap <space>k <C-w>k
+nnoremap <space>l <c-w>l
+
+"enable folding
+set foldmethod=indent
+set foldlevel=99
+
+au BufNewFile,BufRead *.py
+    \ set textwidth = 79
