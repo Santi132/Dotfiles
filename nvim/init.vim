@@ -46,6 +46,12 @@ Plugin 'tmhedberg/SimpylFold'
 
 Plugin 'hdima/python-syntax'
 
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'fneu/breezy'
+
+Plugin 'rakr/vim-one'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,13 +81,13 @@ set nu
 set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent
 
 " Set the colorscheme
-set background=dark
 set termguicolors
 let g:gruvbox_italic=1
 colorscheme default
+"set background=dark
 
 let python_highlight_all=1
-syntax on
+syntax enable
 
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -113,4 +119,4 @@ set foldmethod=indent
 set foldlevel=99
 
 au BufNewFile,BufRead *.py
-    \ set textwidth = 79
+    \ set textwidth=79

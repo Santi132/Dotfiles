@@ -58,7 +58,7 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='dracula'
+let g:airline_theme='jellybeans'
 let g:airline#extensions#tabline#enabled = 1
 
 " Set numbered lines
