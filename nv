@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+from neovim import attach
+import sys, os.path
+
+args = sys.argv[1:]
+if not args:
+    print("Usage: nv <filename> ...")
+    sys.exit(1)
+
+addr = os.environ["NVIM_LISTEN_ADDRESS"]
+if not addr:
+    print("Not neovim instance running. Start one before using this script")
+    sys.exit(2)
+
+ip, seperator, port = addr.rpartition(':')
+assert seperator
+port = int(port)
+nvim = attach("tcp", path=ip, port=port)
+
+def normalizePath(name):
+    path = os.path.abspath(name).replace(" ", "\\ ")
+    if os.path.isdir(name):
+        path+='/'
+    return path
+
+def openFiles():
+    if os.environ["SESSION_TYPE"] == 'remote/ssh':
+        #were in an ssh session
+        for x in args:
+            nvim.command("silent drop scp://sgutierrez@192.168.102.7/{}".format(normalizePath(x)))
+    else:
+        #not in an ssh session so just open the file
+        for x in args:
+            nvim.command("drop {}".format(normalizePath(x)))
+
+openFiles()
