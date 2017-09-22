@@ -52,6 +52,8 @@ Plugin 'fneu/breezy'
 
 Plugin 'rakr/vim-one'
 
+Plugin 'arcticicestudio/nord-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,7 +72,7 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='base16_google'
+let g:airline_theme='base16_ashes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -83,8 +85,8 @@ set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent
 " Set the colorscheme
 set termguicolors
 let g:gruvbox_italic=1
-colorscheme default
-"set background=dark
+colorscheme nord
+set background=dark
 
 let python_highlight_all=1
 syntax enable
