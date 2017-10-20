@@ -22,15 +22,13 @@ Plugin 'morhetz/gruvbox'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'ryanoasis/vim-devicons'
-
-Plugin 'edkolev/promptline.vim'
 
 Plugin 'sjl/badwolf'
 
@@ -54,6 +52,10 @@ Plugin 'rakr/vim-one'
 
 Plugin 'arcticicestudio/nord-vim'
 
+Plugin 'jceb/vim-orgmode'
+
+Plugin 'tpope/vim-speeddating'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -72,20 +74,20 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='base16_ashes'
+let g:airline_theme='base16_embers'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Set numbered lines
 set nu
-
-set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent
+set relativenumber
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent textwidth=120
 
 " Set the colorscheme
 set termguicolors
 let g:gruvbox_italic=1
-colorscheme nord
+colorscheme gruvbox
 set background=dark
 
 let python_highlight_all=1
@@ -101,10 +103,10 @@ tnoremap <Esc> <C-\><C-n>
 let mapleader = ","
 
 "remapping CtrlP my usage
-nnoremap <space>ff :CtrlP<CR>
+nnoremap <space>f :CtrlP<CR>
 
 "remmapping CtrlPBuffer cuz yeah
-nnoremap <space>bb :CtrlPBuffer<CR>
+nnoremap <space>b :CtrlPBuffer<CR>
 
 autocmd TermOpen * set bufhidden=hide
 
@@ -121,4 +123,7 @@ set foldmethod=indent
 set foldlevel=99
 
 au BufNewFile,BufRead *.py
-    \ set textwidth=79
+    \ set textwidth=80
+
+au BufNewFile,BufRead *.org
+    \ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent textwidth=140
