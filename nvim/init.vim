@@ -22,7 +22,7 @@ Plugin 'morhetz/gruvbox'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-"Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/nerdtree'
 
@@ -30,11 +30,11 @@ Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'ryanoasis/vim-devicons'
 
-Plugin 'sjl/badwolf'
+"Plugin 'sjl/badwolf'
 
-Plugin 'dracula/vim'
+"Plugin 'dracula/vim'
 
-Plugin 'chriskempson/vim-tomorrow-theme'
+"Plugin 'chriskempson/vim-tomorrow-theme'
 
 Plugin 'scrooloose/syntastic'
 
@@ -42,9 +42,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tmhedberg/SimpylFold'
 
-Plugin 'hdima/python-syntax'
+"Plugin 'hdima/python-syntax'
 
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'fneu/breezy'
 
@@ -89,6 +89,9 @@ set termguicolors
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
+
+"press leader esc to take off highlighting
+nnoremap <Esc> :noh<return><esc>
 
 let python_highlight_all=1
 syntax enable
