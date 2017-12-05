@@ -116,6 +116,9 @@ autocmd TermOpen * set bufhidden=hide
 " Dont like pressing enter
 let g:netrw_silent = 1
 
+" Set linenumbers in nerdtree
+let NERDTreeShowLineNumbers=1
+
 nnoremap <space>j <c-w>j
 nnoremap <space>h <c-w>h
 nnoremap <space>k <C-w>k
