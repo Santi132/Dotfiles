@@ -16,8 +16,6 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-fugitive'
 
-Plugin 'scrooloose/syntastic'
-
 Plugin 'w0ng/vim-hybrid'
 
 Plugin 'morhetz/gruvbox'
@@ -32,13 +30,33 @@ Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'ryanoasis/vim-devicons'
 
-Plugin 'edkolev/promptline.vim'
+"Plugin 'sjl/badwolf'
 
-Plugin 'sjl/badwolf'
+"Plugin 'dracula/vim'
 
-Plugin 'dracula/vim'
+"Plugin 'chriskempson/vim-tomorrow-theme'
 
-Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'scrooloose/syntastic'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'tmhedberg/SimpylFold'
+
+"Plugin 'hdima/python-syntax'
+
+"Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'fneu/breezy'
+
+Plugin 'rakr/vim-one'
+
+Plugin 'arcticicestudio/nord-vim'
+
+Plugin 'jceb/vim-orgmode'
+
+Plugin 'tpope/vim-speeddating'
+
+Plugin 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,20 +76,57 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='jellybeans'
+let g:airline_theme='hybrid'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Set numbered lines
-set number
-set tabstop=7 softtabstop=0 expandtab shiftwidth=4 smarttab
+set nu
+set relativenumber
+set tabstop=4 softtabstop=4 shiftwidth=4 smarttab autoindent textwidth=120
+"set expandtab
 
 " Set the colorscheme
-set background=dark
-"set termguicolors
 let g:gruvbox_italic=1
-colorscheme default
+colorscheme hybrid
+set background=dark
 
+"press leader esc to take off highlighting
+nnoremap <Esc> :noh<return><esc>
+
+let python_highlight_all=1
 syntax enable
- 
+
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" remapping the leader key to comma
+let mapleader = ","
+
+"remapping CtrlP my usage
+nnoremap <space>f :CtrlP<CR>
+
+"remmapping CtrlPBuffer cuz yeah
+nnoremap <space>b :CtrlPBuffer<CR>
+
+" Dont like pressing enter
+let g:netrw_silent = 1
+
+" Set linenumbers in nerdtree
+let NERDTreeShowLineNumbers=1
+
+nnoremap <space>j <c-w>j
+nnoremap <space>h <c-w>h
+nnoremap <space>k <C-w>k
+nnoremap <space>l <c-w>l
+
+"enable folding
+set foldmethod=indent
+set foldlevel=99
+
+"au BufNewFile,BufRead *.py
+    "\ set textwidth=80
+
+"au BufNewFile,BufRead *.org
+    "\ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent textwidth=140
