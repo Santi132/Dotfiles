@@ -14,8 +14,6 @@ Plugin 'vim-airline/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'tpope/vim-fugitive'
-
 Plugin 'w0ng/vim-hybrid'
 
 Plugin 'morhetz/gruvbox'
@@ -30,11 +28,7 @@ Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'ryanoasis/vim-devicons'
 
-"Plugin 'sjl/badwolf'
-
-"Plugin 'dracula/vim'
-
-"Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'chriskempson/vim-tomorrow-theme'
 
 Plugin 'scrooloose/syntastic'
 
@@ -42,19 +36,45 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tmhedberg/SimpylFold'
 
-"Plugin 'hdima/python-syntax'
-
-"Plugin 'altercation/vim-colors-solarized'
-
-Plugin 'fneu/breezy'
+Plugin 'hdima/python-syntax'
 
 Plugin 'rakr/vim-one'
+
+Plugin 'rakr/vim-colors-rakr'
 
 Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'jceb/vim-orgmode'
 
 Plugin 'tpope/vim-speeddating'
+
+Plugin 'danilo-augusto/vim-afterglow'
+
+Plugin 'whatyouhide/vim-gotham'
+
+Plugin 'cocopon/iceberg.vim'
+
+Plugin 'jacoborus/tender.vim'
+
+Plugin 'NLKNguyen/papercolor-theme'
+
+Plugin 'exitface/synthwave.vim'
+
+Plugin 'haishanh/night-owl.vim'
+
+Plugin 'agreco/vim-citylights'
+
+Plugin 'nightsense/stellarized'
+
+Plugin 'nightsense/snow'
+
+Plugin 'Jimeno0/vim-chito'
+
+Plugin 'tyrannicaltoucan/vim-quantum'
+
+Plugin 'kaicataldo/material.vim'
+
+Plugin 'ajmwagar/vim-deus'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,20 +94,27 @@ filetype plugin indent on    " required
 let g:airline_powerline_fonts=1
 set laststatus=2
 set t_Co=256
-let g:airline_theme='base16_embers'
+let g:airline_theme='quantum'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Set numbered lines
 set nu
 set relativenumber
-set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab autoindent textwidth=120
+"set autoindent smarttab textwidth=140
+"set expandtab 
+"set softtabstop=0
+"set shiftwidth=4
+"set tabstop=4
+set noet ci pi sts=0 sw=4 ts=4
 
 " Set the colorscheme
 set termguicolors
 let g:gruvbox_italic=1
-colorscheme gruvbox
+let g:quantum_black=1
+let g:quantum_italics=1
+colorscheme quantum
 set background=dark
 
 "press leader esc to take off highlighting
@@ -105,6 +132,9 @@ tnoremap <Esc> <C-\><C-n>
 " remapping the leader key to comma
 let mapleader = ","
 
+" remapping the localleader key to backslash
+let maplocalleader = "\\"
+
 "remapping CtrlP my usage
 nnoremap <space>f :CtrlP<CR>
 
@@ -112,6 +142,7 @@ nnoremap <space>f :CtrlP<CR>
 nnoremap <space>b :CtrlPBuffer<CR>
 
 autocmd TermOpen * set bufhidden=hide
+au TermOpen * setlocal nonumber norelativenumber
 
 " Dont like pressing enter
 let g:netrw_silent = 1
@@ -128,8 +159,7 @@ nnoremap <space>l <c-w>l
 set foldmethod=indent
 set foldlevel=99
 
-au BufNewFile,BufRead *.py
-    \ set textwidth=80
+au BufNewFile,BufRead *.py setlocal noet ci pi sts=0 sw=4 ts=4
 
 au BufNewFile,BufRead *.org
-    \ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent textwidth=140
+	\ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent textwidth=140
