@@ -76,6 +76,12 @@ Plugin 'kaicataldo/material.vim'
 
 Plugin 'ajmwagar/vim-deus'
 
+Plugin 'tomasr/molokai'
+
+Plugin 'koirand/tokyo-metro.vim'
+
+Plugin 'BrainDeath0/Hypsteria'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -93,8 +99,8 @@ filetype plugin indent on    " required
 
 let g:airline_powerline_fonts=1
 set laststatus=2
-set t_Co=256
-let g:airline_theme='quantum'
+"set t_Co=256
+let g:airline_theme='ayu_mirage'
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -114,7 +120,7 @@ set termguicolors
 let g:gruvbox_italic=1
 let g:quantum_black=1
 let g:quantum_italics=1
-colorscheme quantum
+colorscheme tokyo-metro
 set background=dark
 
 "press leader esc to take off highlighting
