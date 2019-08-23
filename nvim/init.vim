@@ -22,8 +22,6 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Plugin 'scrooloose/nerdcommenter'
 
-Plugin 'scrooloose/nerdtree'
-
 Plugin 'nanotech/jellybeans.vim'
 
 Plugin 'ryanoasis/vim-devicons'
@@ -35,8 +33,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'tmhedberg/SimpylFold'
-
-Plugin 'hdima/python-syntax'
 
 Plugin 'rakr/vim-one'
 
@@ -82,6 +78,8 @@ Plugin 'koirand/tokyo-metro.vim'
 
 Plugin 'BrainDeath0/Hypsteria'
 
+Plugin 'ntk148v/vim-horizon'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -102,18 +100,15 @@ set laststatus=2
 "set t_Co=256
 let g:airline_theme='ayu_mirage'
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Set numbered lines
 set nu
 set relativenumber
-"set autoindent smarttab textwidth=140
-"set expandtab 
-"set softtabstop=0
-"set shiftwidth=4
-"set tabstop=4
-set noet ci pi sts=0 sw=4 ts=4
+set autoindent smarttab textwidth=140
+set expandtab 
+set softtabstop=0
+set shiftwidth=4
+set tabstop=4
 
 " Set the colorscheme
 set termguicolors
@@ -128,9 +123,6 @@ nnoremap <Esc> :noh<return><esc>
 
 let python_highlight_all=1
 syntax enable
-
-" toggle nerdtree
-map <C-n> :NERDTreeToggle<CR>
 
 " remap the escap in terminal 
 tnoremap <Esc> <C-\><C-n>
@@ -153,9 +145,6 @@ au TermOpen * setlocal nonumber norelativenumber
 " Dont like pressing enter
 let g:netrw_silent = 1
 
-" Set linenumbers in nerdtree
-let NERDTreeShowLineNumbers=1
-
 nnoremap <space>j <c-w>j
 nnoremap <space>h <c-w>h
 nnoremap <space>k <C-w>k
@@ -164,8 +153,6 @@ nnoremap <space>l <c-w>l
 "enable folding
 set foldmethod=indent
 set foldlevel=99
-
-au BufNewFile,BufRead *.py setlocal noet ci pi sts=0 sw=4 ts=4
 
 au BufNewFile,BufRead *.org
 	\ set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab autoindent textwidth=140
