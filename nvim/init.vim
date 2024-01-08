@@ -1,99 +1,80 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+Plug 'VundleVim/Vundle.vim'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'vim-airline/vim-airline'
 
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'w0ng/vim-hybrid'
 
-Plugin 'w0ng/vim-hybrid'
+Plug 'morhetz/gruvbox'
 
-Plugin 'morhetz/gruvbox'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'scrooloose/nerdcommenter'
 
-Plugin 'scrooloose/nerdcommenter'
+Plug 'nanotech/jellybeans.vim'
 
-Plugin 'nanotech/jellybeans.vim'
+Plug 'ryanoasis/vim-devicons'
 
-Plugin 'ryanoasis/vim-devicons'
+Plug 'chriskempson/vim-tomorrow-theme'
 
-Plugin 'chriskempson/vim-tomorrow-theme'
+Plug 'scrooloose/syntastic'
 
-Plugin 'scrooloose/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'tmhedberg/SimpylFold'
 
-Plugin 'tmhedberg/SimpylFold'
+Plug 'rakr/vim-one'
 
-Plugin 'rakr/vim-one'
+Plug 'rakr/vim-colors-rakr'
 
-Plugin 'rakr/vim-colors-rakr'
+Plug 'arcticicestudio/nord-vim'
 
-Plugin 'arcticicestudio/nord-vim'
+Plug 'jceb/vim-orgmode'
 
-Plugin 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
 
-Plugin 'tpope/vim-speeddating'
+Plug 'danilo-augusto/vim-afterglow'
 
-Plugin 'danilo-augusto/vim-afterglow'
+Plug 'whatyouhide/vim-gotham'
 
-Plugin 'whatyouhide/vim-gotham'
+Plug 'cocopon/iceberg.vim'
 
-Plugin 'cocopon/iceberg.vim'
+Plug 'jacoborus/tender.vim'
 
-Plugin 'jacoborus/tender.vim'
+Plug 'NLKNguyen/papercolor-theme'
 
-Plugin 'NLKNguyen/papercolor-theme'
+Plug 'exitface/synthwave.vim'
 
-Plugin 'exitface/synthwave.vim'
+Plug 'haishanh/night-owl.vim'
 
-Plugin 'haishanh/night-owl.vim'
+Plug 'agreco/vim-citylights'
 
-Plugin 'agreco/vim-citylights'
+Plug 'nightsense/stellarized'
 
-Plugin 'nightsense/stellarized'
+Plug 'nightsense/snow'
 
-Plugin 'nightsense/snow'
+Plug 'Jimeno0/vim-chito'
 
-Plugin 'Jimeno0/vim-chito'
+Plug 'tyrannicaltoucan/vim-quantum'
 
-Plugin 'tyrannicaltoucan/vim-quantum'
+Plug 'kaicataldo/material.vim'
 
-Plugin 'kaicataldo/material.vim'
+Plug 'ajmwagar/vim-deus'
 
-Plugin 'ajmwagar/vim-deus'
+Plug 'tomasr/molokai'
 
-Plugin 'tomasr/molokai'
+Plug 'koirand/tokyo-metro.vim'
 
-Plugin 'koirand/tokyo-metro.vim'
+Plug 'BrainDeath0/Hypsteria'
 
-Plugin 'BrainDeath0/Hypsteria'
+Plug 'ntk148v/vim-horizon'
 
-Plugin 'ntk148v/vim-horizon'
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 let g:airline_powerline_fonts=1
 set laststatus=2
